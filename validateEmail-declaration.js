@@ -19,5 +19,11 @@ function validateEmail(email){
     // 원활한 사용을 위해서는 공식문서(mdn)사용이 필수적이다.
     const hasAtSign = filteredArray.includes('@');
     const hasDot = filteredArray.includes('.');
+
+    return hasAtSign && hasDot; // 두개의 값이 참이면 참을 반환한다.
+  } else {
+    console.log(email + "<- 이 매개변수는 올바른 데이터타입이 아닙니다.");
   }
 }
+
+module.exports = validateEmail;
